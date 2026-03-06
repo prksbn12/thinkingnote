@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>씽킹노트</title>
+</head>
+
+<body>
+    <div id="root">
+        <div class="root-viewport">
+            <div class="root-component is-auth">
+                <section class="auth-route">
+                    <article class="auth-content">
+                        <h1><img src="#" alt="로고 이미지"></h1>
+                        <h2>로그인</h2>
+                        <form action="login" method="post" novalidate>
+                            <fieldset>
+                                <legend>로그인 정보 입력</legend>
+                                <div class="wrap-login">
+                                    <label for="login-useremail">이메일</label><button type="button" class="link-join">회원가입</button><input type="email" name="useremail" id="login-useremail" placeholder="이메일을 입력하세요." required>
+                                    <p class="msg-input"></p>
+                                </div>
+                                <div class="wrap-login">
+                                    <label for="login-userpw">비밀번호</label><button type="button" class="link-reset">비밀번호 재설정</button><input type="password" name="userpw" id="login-userpw" placeholder="비밀번호를 입력하세요." required>
+                                    <p class="msg-input"></p>
+                                </div>
+                            </fieldset>
+                            <div class="wrap-btn"><button type="submit" class="btn-login">로그인</button><button type="button" class="btn-tutorial">튜토리얼</button></div>
+                        </form>
+                    </article>
+                    <div class="auth-join-layer">
+                        <div class="auth-join-overlay">
+                            <div class="auth-join-content">
+                                <h2>회원가입</h2>
+                                <form action="join" method="post" novalidate>
+                                    <fieldset>
+                                        <legend>회원가입 정보 입력</legend>
+                                        <div class="wrap-join">
+                                            <label for="join-useremail">이메일</label><input type="email" name="useremail" id="join-useremail" placeholder="이메일을 입력하세요." required><button type="button" class="btn-send">전송</button>
+                                            <p class="msg-input"></p>
+                                            <div class="wrap-join-authnum">
+                                                <label for="join-authnum">인증번호</label><input type="number" name="authnum" id="join-authnum" placeholder="인증번호를 입력하세요." required><button type="button" class="btn-confirm">확인</button>
+                                                <p class="msg-input"></p>
+                                            </div>
+                                        </div>
+                                        <div class="wrap-join">
+                                            <label for="join-userpw">비밀번호</label><input type="password" name="userpw" id="join-userpw" placeholder="비밀번호를 입력하세요." required>
+                                            <p class="msg-input"></p>
+                                            <div class="wrap-join-checkpw">
+                                                <label for="join-checkpw">비밀번호 확인</label><input type="password" name="checkpw" id="join-checkpw" placeholder="비밀번호를 한번 더 입력하세요." required>
+                                                <p class="msg-input"></p>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                    <fieldset>
+                                        <legend>약관 동의</legend>
+                                        <label for="join-termall">전체 동의</label><input type="checkbox" id="join-termall">
+                                        <div class="wrap-join"><label for="join-termservice">이용약관 동의 (필수)</label><input type="checkbox" name="termservice" id="join-termservice" required><label for="join-termprivacy">개인정보 수집 및 이용 동의 (필수)</label><input type="checkbox" name="termprivacy" id="join-termprivacy" required><label for="join-termmarketing">마케팅 정보 수신 동의 (선택)</label><input type="checkbox" name="termmarketing" id="join-termmarketing"></div>
+                                    </fieldset>
+                                    <div class="wrap-btn"><button type="button" class="btn-cancel">취소</button><button type="submit" class="btn-complete">완료</button></div>
+                                </form>
+                                <div class="wrap-join-success">
+                                    <p class="des-success">회원가입이 완료되었어요.<br>이제 서비스를 이용해 보세요!</p>
+                                    <button type="button" class="btn-close">닫기</button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="auth-reset-layer">
+                        <div class="auth-reset-overlay">
+                            <div class="auth-reset-content">
+                                <h2>비밀번호 재설정</h2>
+                                <form action="reset" method="post" novalidate>
+                                    <fieldset>
+                                        <legend>비밀번호 재설정 정보 입력</legend>
+                                        <div class="wrap-reset">
+                                            <label for="reset-useremail">이메일</label><input type="email" name="useremail" id="reset-useremail" placeholder="이메일을 입력하세요." required><button type="button" class="btn-send">전송</button>
+                                            <p class="msg-input"></p>
+                                            <div class="wrap-reset-authnum">
+                                                <label for="reset-authnum">인증번호</label><input type="number" name="authnum" id="reset-authnum" placeholder="인증번호를 입력하세요." required><button type="button" class="btn-confirm">확인</button>
+                                                <p class="msg-input"></p>
+                                            </div>
+                                        </div>
+                                        <div class="wrap-reset">
+                                            <label for="reset-userpw">비밀번호</label><input type="password" name="userpw" id="reset-userpw" placeholder="비밀번호를 입력하세요." required>
+                                            <p class="msg-input"></p>
+                                            <div class="wrap-reset-checkpw">
+                                                <label for="reset-checkpw">비밀번호 확인</label><input type="password" name="checkpw" id="reset-checkpw" placeholder="비밀번호를 한번 더 입력하세요." required>
+                                                <p class="msg-input"></p>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                    <div class="wrap-btn"><button type="button" class="btn-cancel">취소</button><button type="submit" class="btn-complete">완료</button></div>
+                                </form>
+                                <div class="wrap-reset-success">
+                                    <p class="des-success">비밀번호 재설정이 완료되었어요.<br>이제 서비스를 이용해 보세요!</p>
+                                    <button type="button" class="btn-close">닫기</button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="onboarding-route">
+                    <div class="onboarding-intro-layer">
+                        <div class="onboarding-intro-overlay">
+                            <div class="onboarding-intro-content">
+                                <p class="des-intro">씽킹노트가 처음이신가요?<br>지금 바로 튜토리얼을 진행해 보세요!</p>
+                                <div class="wrap-btn"><button type="button" class="btn-cancel">취소</button><button type="button" class="btn-progress">진행</button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <article class="onboarding-content">
+                        <h1><img src="#" alt="로고 이미지"></h1>
+                        <h2>튜토리얼</h2>
+                        <ul class="list-steps">
+                            <li class="on">프로필 영역에서 프로필 정보를 확인해 보세요.</li>
+                            <li>환경설정 버튼을 선택해서 설정을 변경하세요.</li>
+                            <li>화면을 아래로 스크롤해서 상세 옵션을 살펴보세요.</li>
+                            <li>설정을 모두 마쳤다면 완료 버튼을 클릭하세요.</li>
+                            <li>노트 목록에서 원하는 노트를 선택하세요.</li>
+                            <li>노트에 원하는 문구를 작성해 보세요.</li>
+                            <li>클릭과 드래그를 사용해서 노트를 편집해 보세요.</li>
+                            <li>툴바를 이용해서 노트를 꾸며 보세요.</li>
+                            <li>새 노트 버튼으로 새로운 노트를 추가할 수 있어요.</li>
+                            <li>준비가 끝났다면 첫 번째 노트를 생성해 보세요.</li>
+                        </ul>
+                        <div class="wrap-btn">
+                            <div class="wrap-btn-indicator">
+                                <button type="button" class="btn-prev" aria-label="이전"><i aria-hidden="true"></i></button>
+                                <ul class="list-indicator"></ul>
+                                <button type="button" class="btn-next" aria-label="다음"><i aria-hidden="true"></i></button>
+                            </div>
+                            <button type="button" class="btn-skip">건너뛰기</button>
+                        </div>
+                    </article>
+                </section>
+                <main class="note-route">
+                    <section class="note-container">
+                        <article class="note-content">
+                            <div class="wrap-add" contenteditable="true" data-placeholder="생성된 노트가 없어요. 여기에 새 노트를 작성해 보세요!"></div>
+                            <div class="wrap-edit" contenteditable="true"></div>
+                        </article>
+                        <aside class="toolbar">
+                            <div class="wrap-style">
+                                <div class="wrap-style-size" aria-label="글자 색상">
+                                    <i aria-hidden="true"></i>
+                                    <div class="wrap-size"><button type="button" class="size-h1" aria-label="제목 1"><i aria-hidden="true"></i></button><button type="button" class="size-h2" aria-label="제목 2"><i aria-hidden="true"></i></button><button type="button" class="size-h3" aria-label="제목 3"><i aria-hidden="true"></i></button><button type="button" class="size-p" aria-label="본문"><i aria-hidden="true"></i></button></div>
+                                </div>
+                                <button type="button" class="style-bold" aria-label="볼드체"><i aria-hidden="true"></i></button><button type="button" class="style-underline" aria-label="밑줄체"><i aria-hidden="true"></i></button>
+                                <div class="wrap-style-color" aria-label="글자 색상">
+                                    <i aria-hidden="true"></i>
+                                    <div class="wrap-color"><button type="button" class="color-black" aria-label="검정"><i aria-hidden="true"></i></button><button type="button" class="color-white" aria-label="하양"><i aria-hidden="true"></i></button><button type="button" class="color-red" aria-label="빨강"><i aria-hidden="true"></i></button><button type="button" class="color-orange" aria-label="주황"><i aria-hidden="true"></i></button><button type="button" class="color-yellow" aria-label="노랑"><i aria-hidden="true"></i></button><button type="button" class="color-green" aria-label="초록"><i aria-hidden="true"></i></button><button type="button" class="color-blue" aria-label="블루"><i aria-hidden="true"></i></button><button type="button" class="color-purple" aria-label="보라"><i aria-hidden="true"></i></button></div>
+                                </div>
+                                <button type="button" class="btn-numberlist" aria-label="번호가 있는 목록"><i aria-hidden="true"></i></button><button type="button" class="btn-bulletlist" aria-label="번호가 없는 목록"><i aria-hidden="true"></i></button><button type="button" class="btn-checkbox" aria-label="체크박스"><i aria-hidden="true"></i></button><button type="button" class="btn-stickymemo" aria-label="스티커 메모"><i aria-hidden="true"></i></button>
+                            </div>
+                            <button type="button" class="fab-add" aria-label="새 노트"><i aria-hidden="true"></i></button>
+                        </aside>
+                        <aside class="sidebar">
+                            <h1><img src="#" alt="로고 이미지"></h1>
+                            <div class="wrap-user">
+                                <div class="userimg"><img src="#" alt="사용자 이미지"></div>
+                                <p class="username"></p>
+                                <div class="wrap-btn"><button type="button" class="btn-set" aria-label="환경설정"><i aria-hidden="true"></i></button><button type="button" class="btn-logout" aria-label="로그아웃"><i aria-hidden="true"></i></button></div>
+                            </div>
+                            <form action="search" method="get">
+                                <fieldset>
+                                    <legend>검색어 입력</legend>
+                                    <label for="search-keyword">검색어</label><input type="search" name="keyword" id="search-keyword" placeholder="검색어를 입력하세요."><button type="submit" class="btn-search" aria-label="검색"><i aria-hidden="true"></i></button>
+                                </fieldset>
+                            </form>
+                            <div class="wrap-notes">
+                                <h2>노트 목록</h2>
+                                <ul class="list-notes">
+                                    <li class="add"><i aria-hidden="true"></i>새 메모</li>
+                                </ul>
+                            </div>
+                        </aside>
+                    </section>
+                    <div class="note-set-layer">
+                        <div class="note-set-overlay">
+                            <div class="note-set-content">
+                                <h2>환경설정</h2>
+                                <ul class="list-set">
+                                    <li class="guest">
+                                        <h3>로그인</h3>
+                                        <button type="button" class="btn-login">로그인</button>
+                                    </li>
+                                    <li class="member">
+                                        <h3>사용자</h3>
+                                        <form action="setuser" method="post" novalidate>
+                                            <fieldset>
+                                                <legend>사용자 정보 변경</legend>
+                                                <div class="wrap-setuser">
+                                                    <label for="setuser-userimg">
+                                                        <div class="userimg"><img src="#" alt="사용자 이미지"></div>
+                                                    </label>
+                                                    <input type="file" name="userimg" id="setuser-userimg" accept="image/*"><button type="button" class="btn-delete">삭제</button>
+                                                </div>
+                                                <div class="wrap-setuser">
+                                                    <label for="setuser-username">이름</label><input type="text" name="username" id="setuser-username" placeholder="이름을 입력하세요." required>
+                                                    <p class="msg-input"></p>
+                                                </div>
+                                                <div class="wrap-setuser">
+                                                    <label for="setuser-useremail">이메일</label><input type="email" name="useremail" id="setuser-useremail" placeholder="이메일을 입력하세요." required><button type="button" class="btn-send">전송</button>
+                                                    <p class="msg-input"></p>
+                                                    <div class="wrap-setuser-authnum">
+                                                        <label for="setuser-authnum">인증번호</label><input type="number" name="authnum" id="setuser-authnum" placeholder="인증번호를 입력하세요." required><button type="button" class="btn-confirm">확인</button>
+                                                        <p class="msg-input"></p>
+                                                    </div>
+                                                </div>
+                                                <div class="wrap-setuser">
+                                                    <label for="setuser-userpw">비밀번호</label><input type="password" name="userpw" id="setuser-userpw" placeholder="비밀번호를 입력하세요." required>
+                                                    <p class="msg-input"></p>
+                                                    <div class="wrap-setuser-checkpw">
+                                                        <label for="setuser-checkpw">비밀번호 확인</label><input type="password" name="checkpw" id="setuser-checkpw" placeholder="비밀번호를 한번 더 입력하세요." required>
+                                                        <p class="msg-input"></p>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                            <div class="wrap-btn"><button type="button" class="btn-cancel">취소</button><button type="submit" class="btn-complete">완료</button></div>
+                                        </form>
+                                    </li>
+                                    <li>
+                                        <h3>테마</h3>
+                                        <div class="wrap-settheme">
+                                            <label for="settheme">테마</label>
+                                            <select id="settheme">
+                                                <option value="system">시스템 설정</option>
+                                                <option value="light">라이트 모드</option>
+                                                <option value="dark">다크 모드</option>
+                                            </select>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h3>언어</h3>
+                                        <div class="wrap-setlang">
+                                            <label for="setslang">언어</label>
+                                            <select id="setslang">
+                                                <option value="ko">한국어</option>
+                                            </select>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h3>튜토리얼</h3>
+                                        <button type="button" class="btn-replay">다시보기</button>
+                                    </li>
+                                    <li>
+                                        <h3>고객센터</h3>
+                                        <a href="mailto:support@thinkingnote.com" class="link-support">support@thinkingnote.com</a>
+                                    </li>
+                                </ul>
+                                <div class="wrap-info">
+                                    <p class="info-version">Version 1.0.0</p>
+                                    <p class="info-copyright">© 2026 Thinking Note. All rights reserved.</p>
+                                </div>
+                                <button type="button" class="btn-close">닫기</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
